@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnuva Kuralları | Nexforce Gaming</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f0f12;
+            color: #ffffff;
+            display: flex;
+        }
+
+        /* Sol Sabit Menü */
+        .sidebar {
+            width: 240px;
+            height: 100vh;
+            background-color: #16161a;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 2px solid #282830;
+            padding-top: 20px;
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4655;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #aaaaaa;
+            display: block;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .sidebar a:hover {
+            color: #ffffff;
+            background-color: #222229;
+            border-left: 4px solid #ff4655;
+        }
+
+        /* Kurallar Sayfası Aktif Buton */
+        .sidebar a.active {
+            color: #ffffff;
+            background-color: #222229;
+            border-left: 4px solid #ff4655;
+        }
+
+        /* Sağ İçerik Alanı */
+        .content {
+            margin-left: 240px;
+            padding: 40px;
+            width: calc(100% - 240px);
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            color: #ff4655;
+            margin-top: 0;
+        }
+
+        .card {
+            background-color: #16161a;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #282830;
+            margin-bottom: 25px;
+        }
+
+        /* 8. Madde: Maç Formatı Şeması Tasarımı */
+        .format-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .format-step {
+            background-color: #222229;
+            border-left: 5px solid #ff4655;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .format-step h3 {
+            margin: 0 0 5px 0;
+            color: #ffffff;
+        }
+
+        /* 7. Madde: Ceza ve Anti-Cheat Tablosu */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #222229;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #32323d;
+        }
+
+        th {
+            background-color: #ff4655;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #2a2a33;
+        }
+
+        .badge-penalty {
+            background-color: #ff4655;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            body { display: block; }
+            .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 2px solid #282830; }
+            .content { margin-left: 0; width: 100%; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">NEXFORCE</div>
+        <a href="index.html">🏠 Ana Sayfa</a>
+        <a href="kurallar.html" class="active">📜 Turnuva Kuralları</a>
+        <a href="takimlar.html">🌍 Takımlar</a>
+        <a href="sampiyonlar.html">🏆 Geçmiş Şampiyonlar</a>
+        <a href="kupa-odasi.html">👑 Kupa Odası</a>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <h2>⚔️ Masters Europe Maç Formatı</h2>
+            <p>Turnuva boyunca adil ve profesyonel bir rekabet için belirlenen aşamalar aşağıda listelenmiştir:</p>
+            
+            <div class="format-container">
+                <div class="format-step">
+                    <h3>Grup Aşaması (Bo1)</h3>
+                    <p>Takımlar tek maç üzerinden puan mücadelesi verir. En yüksek puanı toplayanlar üst tura yükselir.</p>
+                </div>
+                <div class="format-step">
+                    <h3>Eleme ve Yarı Finaller (Bo3)</h3>
+                    <p>En iyilerin karşılaştığı bu aşamada 3 maçlık seri (Best of 3) oynanır. 2 haritayı kazanan takım adını üst tura yazdırır.</p>
+                </div>
+                <div class="format-step">
+                    <h3>Büyük Final (Bo5)</h3>
+                    <p>Şampiyonun belirleneceği dev finalde 5 haritalık (Best of 5) epik bir seri oynanır. 3 harita alan kupayı kaldırır!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🛡️ Anti-Cheat ve Ceza Kuralları</h2>
+            <p>Nexforce Gaming turnuvalarında hileye ve centilmenlik dışı hareketlere asla tolerans gösterilmez.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kural İhlali</th>
+                        <th>Ceza Seviyesi</th>
+                        <th>Uygulanacak Yaptırım</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Üçüncü Parti Yazılım / Hile Kullanımı</td>
+                        <td><span class="badge-penalty">KRİTİK</span></td>
+                        <td>Takım halinde turnuvadan süresiz men ve Nexforce organizasyonlarından kalıcı ban.</td>
+                    </tr>
+                    <tr>
+                        <td>Maç Saatine Geç Kalma (İlk 15 Dakika)</td>
+                        <td><span class="badge-penalty">ORTA</span></td>
+                        <td>İlk haritada otomatik mağlubiyet sayılma.</td>
+                    </tr>
+                    <tr>
+                        <td>Toxic Söylemler / Centilmenlik Dışı Davranış</td>
+                        <td><span class="badge-penalty">DÜŞÜK</span></td>
+                        <td>İlk ihlalde uyarı, tekrarı halinde takımdan ceza puanı düşülmesi.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
